@@ -1,3 +1,5 @@
+.mobile-block
+    display: none
 @media (max-width: 1200px)
     .main-text__full 
         padding: 24px 20px 37px 20px
@@ -16,6 +18,9 @@
         font-size: 22px
     .reason-slider
         width: 960px
+    .reason:before
+        bottom: -215px
+        z-index: 0
     .reason__slide
         // width: 300px !important
     .reason-slide__img
@@ -26,6 +31,8 @@
     .reason-arrows
         width: 1012px
         bottom: 60px
+    .infrastructure:before
+        top: -115px
     .opportunity__text
         margin-left: 75px
     .opportunity-img
@@ -153,7 +160,19 @@
         width: 385px
     .footer-copyright
         width:  300px
+
+    .modal-list
+        flex-direction: column
+    .modal__item
+        height: auto
+        text-align: center
+        width: 100%
+    .callback-dialog
+        padding-left: 65px
+        padding-right: 65px
 @media (max-width: 768px)
+    .mobile-block
+        display: block
     .main-head-menu
         display: none
         &_mobile
@@ -212,6 +231,8 @@
         font-size: 13px
     .reason
         padding-top: 32px
+        &::before
+            bottom: -500px
     .reason__title
         font-size: 24px
         margin-left: 0
@@ -268,13 +289,21 @@
         margin-right: auto
     .tradeIn-header-block:nth-child(2)
         display: none
+    .tradeIn__button
+        display: block
+        margin-left: auto
+        margin-right: auto
     .tradeIn__title
         font-size: 24px
+        text-align: center
+    .tradeIn__subtitle
+        display: block
         text-align: center
     .tradeIn-header
         margin-bottom: 30px
     .tradeIn-blocks
         justify-content: center
+        margin-bottom: 19px
     .about__title
         margin-left: 0
         text-align: center
@@ -345,7 +374,7 @@
     .plan-content__box:first-child
         margin-top: 0
     .easy
-        padding-bottom: 37px
+        padding-bottom: 58px
     .easy-header
         margin-bottom: 24px
     .easy-header-block:nth-child(2)
@@ -401,6 +430,23 @@
         margin-bottom: 30px
         text-align: center
         width: 100%
+    .modal__link
+        font-size: 24px
+    .callback__title
+        font-size: 24px
+    .callback__subtitle
+        font-size: 14px
+    .callback__input
+        width: 290px
+        font-size: 14px
+    .callback__link
+        font-size: 14px
+    .callback__close
+        width: 44px
+        height: 44px
+    .callback__close__span
+        width: 40px
+        height: 40px
 @media (max-width: 576px)
     .main-phone__text
         display: none
@@ -408,14 +454,23 @@
         display: block
         width: 35px
         height: 35px
+    .reason:before
+        bottom: -535px
     .plan-tabs
         justify-content: center
     .opportunity-video, .opportunity-img, .opportunity-img .opportunity-video iframe
         width: 100% !important
     .gallery__item img
         width: auto
+    .callback-dialog
+        width: 100%
+        border-radius: 0
     .gallery-container, .gallery__slide, .gallery__slide img
         height: 572px !important
 @media (max-width: 330px)
     .main-text__params
         width: 33%
+    .reason:before 
+        bottom: -735px
+    .modal__link
+        font-size: 18px

@@ -1,7 +1,17 @@
 .main
     padding-top: 50px
-    background: url('../img/main/main-bg.png') center no-repeat
-    background-size: cover
+    background: #ECF0F5    
+    &::before
+        content: ''
+        position: absolute
+        background: url('../img/main/main-bg.png')
+        width: 100%
+        height: 873px
+        top: 0
+        left: 0
+        display: block
+        z-index: 0
+        background-repeat: no-repeat
     &::after
         content: ''
         position: absolute
@@ -10,8 +20,12 @@
         width: 1041px
         height: 825px
         top: 55px
-        z-index: -1
+        display: block
+        z-index: 0
     &-head
+        display: block
+        position: relative
+        z-index: 5
         margin-bottom: 60px
         &-wrap
             display: flex
@@ -26,37 +40,54 @@
             &_mobile
                 display: none
     &-block
+        
         display: flex
     &-menu__link
-        &:first-child
-            display: block
-            position: relative
+        display: block
+        position: relative
+        width: 26px
+        height: 26px
+        // margin-bottom: 35px
+        margin-top: 12px
+        & span
+            top: 50%
+            margin-top: -1.5px
+            position: absolute
             width: 26px
-            height: 26px
-            // margin-bottom: 35px
-            margin-top: 12px
-            & span
-                top: 50%
-                margin-top: -1.5px
+            height: 3px
+            background: $main-color
+            border-radius: 2px
+            transition: .2s
+            opacity: 1
+            &::before
+                content: ''
                 position: absolute
+                background: $main-color
                 width: 26px
                 height: 3px
+                margin-top: -10px
+                transition: .2s
+            &::after
+                content: ''
+                position: absolute
                 background: $main-color
-                border-radius: 2px
+                width: 26px
+                height: 3px
+                margin-top: 10px
+                transition: .1s
+        &_active
+            & span
+                height: 0
+                transition: .2s
                 &::before
-                    content: ''
-                    position: absolute
-                    background: $main-color
-                    width: 26px
-                    height: 3px
-                    margin-top: -10px
+                    transform: rotate(45deg)
+                    margin-top: 0
+                    transition: .1s
                 &::after
-                    content: ''
-                    position: absolute
-                    background: $main-color
-                    width: 26px
-                    height: 3px
-                    margin-top: 10px
+                    transform: rotate(-45deg)
+                    margin-top: 0
+                    transition: .1s
+
         // &:last-child
         //     width: 19px
         //     height: 19px
@@ -116,12 +147,16 @@
         font-size: 14px
         color: $link-color
     &-body
+        display: block
+        position: relative
         margin-left: 75px
+        z-index: 5
     &-body__links
         display: flex
         width: 411px
         justify-content: space-between
         margin-bottom: 45px
+        position: relative
     &-link
         display: flex
         align-items: center
@@ -193,6 +228,9 @@
                 top: 2px
                 left: 2px
     &-text
+        display: block
+        position: relative
+        z-index: 2
         &-wrap
             display: flex
             justify-content: space-between

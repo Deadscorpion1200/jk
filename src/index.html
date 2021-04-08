@@ -16,7 +16,6 @@
                     <div class="main-block">
                         <div class="main-head-menu">
                             <a href="#" class="main-menu__link"><span></span></a>
-                            <a href="#" class="main-menu__link"><span></span></a>
                         </div>
                         <div class="main-logo">
                             <a href="#" class="main-logo__link">
@@ -81,7 +80,7 @@
                             </svg>                                
                     </button>
                     <div class="main-head-menu_mobile">
-                        <a href="#" class="main-menu__link"><span></span></a>
+                        <a href="#" class="main-menu__link mobile-menu"><span></span></a>
                     </div>
                     <!-- /.main-head-menu_mobile -->
                 </div>
@@ -170,7 +169,7 @@
         <!-- /.container -->
     </main>
     <!-- /.main -->
-    <section class="reason">
+    <section class="reason" id="reason">
         <div class="container">
             <h2 class="reason__title">9 причин купить здесь квартиру</h2>
             <!-- /.reason__title -->
@@ -244,7 +243,7 @@
         <!-- /.reason-arrows -->
     </section>
     <!-- /.reason -->
-    <Section class="opportunity">
+    <Section class="opportunity" id="opportunity">
         <div class="container">
             <h2 class="opportunity__title">Все возможности в одном месте</h2>
             <!-- /.opportunity__title -->
@@ -272,7 +271,7 @@
         <!-- /.opportunity-video -->
     </Section>
     <!-- /.opportunity -->
-    <section class="infrastructure">
+    <section class="infrastructure" id="infrastructure">
         <div class="container">
             <h2 class="infrastructure__title">Инфраструктура</h2>
             <div class="infrastructure-wrap">
@@ -291,7 +290,7 @@
                         <li class="infrastructure-item" data-tab="#tab_11"><div class="item-number"><span class="item-number_bg">11</span></div>Храмы</li>
                     </ul>
                 </div>
-                <select class="infrastructure-select">
+                <!-- <select class="infrastructure-select">
                     <option class="infrastructure__option" data-tab="#tab_1">Все</option>
                     <option class="infrastructure__option" data-tab="#tab_2">Школы и детские сады</option>
                     <option class="infrastructure__option" data-tab="#tab_3">Банки</option>
@@ -303,7 +302,7 @@
                     <option class="infrastructure__option" data-tab="#tab_9">Домашние животные</option>
                     <option class="infrastructure__option" data-tab="#tab_10">Музеи, театры, кино</option>
                     <option class="infrastructure__option" data-tab="#tab_11">Храмы</option>
-                </select>
+                </select> -->
                 <!-- /.infrastructure-menu -->
                 <div class="infrastructure-content">
                     <div class="infrastructure-item__content" id="tab_1">
@@ -621,7 +620,7 @@
         <!-- /.container -->
     </section>
     <!-- /.infrastructure -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="gallery__title">Галерея</h2>
         </div>
@@ -653,7 +652,7 @@
             </div>
         </div>
     </section>
-    <section class="tradeIn">
+    <section class="tradeIn" id="tradeIn">
         <div class="container">
             <div class="tradeIn-header">
                 <div class="tradeIn-header-block">
@@ -665,8 +664,6 @@
                 </div>
             </div>
             <!-- /.tradeIn-header -->
-            <div class="tradeIn-body"></div>
-            <!-- /.tradeIn-body -->
             <div class="tradeIn-blocks">
                 <div class="tradeIn-block">
                     <div class="tradeIn-block__icon">
@@ -738,11 +735,14 @@
                 <!-- /.tradeIn-block -->
             </div>
             <!-- /.tradeIn-blocks -->
+            <div class="tradeIn-header-block mobile-block">
+                <button class="tradeIn__button"><span class="tradeIn__button_bg">Выбрать квартиру</span></button>
+            </div>
         </div>
         <!-- /.container -->
     </section>
     <!-- /.tradeIn -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h2 class="about__title">О застройщике</h2>
             <!-- /.about__title -->
@@ -777,7 +777,7 @@
         <!-- /.container -->
     </section>
     <!-- /.about -->
-    <section class="steps">
+    <section class="steps" id="steps">
         <div class="container">
             <h2 class="steps__title">Ход строительства ЖК</h2>
             <span class="steps__subtitle">Этапы</span>
@@ -842,7 +842,7 @@
         <!-- /.container -->
     </section>
     <!-- /.exclusive -->
-    <section class="plan">
+    <section class="plan" id="plan">
         <div class="container">
             <h2 class="plan__title">
                 Планировки квартир
@@ -954,7 +954,7 @@
         <!-- /.container -->
     </section>
     <!-- /.plan -->
-    <section class="easy">
+    <section class="easy" id="easy">
         <div class="container">
             <div class="easy-header">
                 <div class="easy-header-block">
@@ -1009,13 +1009,16 @@
                     <div class="easy-card__title">Получить наилучшее предложение</div>
                     <div class="easy-card__description">Специальные условия сделают покупку приятнее!</div>
                 </div>
+                <button class="easy-button mobile-block">
+                    <span class="easy-button_bg">Выбрать квартиру</span>
+                </button>
             </div>
             <!-- /.easy-body -->
         </div>
         <!-- /.container -->
     </section>
     <!-- /.easy -->
-    <section class="important">
+    <section class="important" id="important">
         <div class="container">
             <h2 class="important__title">Важно знать</h2>
             <div class="important-container">
@@ -1054,7 +1057,7 @@
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="contacts-wrap">
                 <div class="contacts-info">
@@ -1113,6 +1116,163 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="main-head">
+                    <div class="main-head-wrap">
+                        <!-- /.main-head-menu -->
+                        <div class="main-block">
+                            <div class="main-head-menu">
+                                <a href="#" class="main-menu__link menu_popup"><span></span></a>
+                            </div>
+                            <div class="main-logo">
+                                <a href="#" class="main-logo__link">
+                                    <h1 class="main-logo__title">Остров</h1>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.main-head-logo -->
+                        <div class="main-head-map">
+                            <div class="main-map__icon">
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.73 2.58257C13.2867 -0.860672 7.71349 -0.861042 4.26987 2.58257C0.826712 6.02569 0.826177 11.5991 4.26987 15.0427L10.0343 20.8071C10.2915 21.0643 10.7084 21.0642 10.9656 20.8071L16.73 15.0427C20.1731 11.5995 20.1737 6.02622 16.73 2.58257ZM13.285 11.5977C11.7459 13.1368 9.25434 13.1371 7.71485 11.5977C6.17564 10.0584 6.17539 7.567 7.71485 6.02758C9.25393 4.48842 11.7455 4.48813 13.285 6.02758C14.8242 7.56671 14.8244 10.0582 13.285 11.5977Z" fill="#47DFB1"/>
+                                </svg>                                
+                            </div>
+                            <span class="main-map__text">Мневники, м. Терехово (2021)</span>
+                        </div>
+                        <!-- /.main-head-map -->
+                        <div class="main-head-info">
+                            <button class="main-info__favorites button-white">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.8522 0.0197754C13.1428 0.0197754 15 1.87697 15 4.16716C15 7.9526 7.49981 12.9803 7.49981 12.9803C7.49981 12.9803 0 8.13383 0 4.16712C0 1.31575 1.85719 0.0197754 4.14737 0.0197754C5.52691 0.0197754 6.74552 0.696323 7.49981 1.73217C8.25421 0.696323 9.47302 0.0197754 10.8522 0.0197754Z" fill="#47DFB1"/>
+                                </svg>                                
+                            </button>
+                            <button class="main-info__obj button-white">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2" cy="2" r="2" fill="#47DFB1"/>
+                                    <circle cx="11" cy="2" r="2" fill="#47DFB1"/>
+                                    <circle cx="11" cy="11" r="2" fill="#47DFB1"/>
+                                    <circle cx="2" cy="11" r="2" fill="#47DFB1"/>
+                                </svg>
+                            </button>
+                            <div class="main-info-phone">
+                                <div class="main-phone__text">
+                                    <div class="main-phone__number">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                            <path d="M12.8766 9.1894C12.0195 9.1894 11.1779 9.05534 10.3804 8.79178C9.98958 8.65849 9.50917 8.78077 9.27066 9.02573L7.6965 10.2141C5.87092 9.23956 4.7464 8.11541 3.78521 6.30354L4.93857 4.77039C5.23822 4.47114 5.3457 4.03401 5.21693 3.62385C4.95224 2.82213 4.81779 1.98093 4.81779 1.12343C4.81782 0.503964 4.31386 0 3.69443 0H1.12339C0.503964 0 0 0.503964 0 1.12339C0 8.22365 5.77638 14 12.8766 14C13.4961 14 14 13.496 14 12.8766V10.3127C14 9.69336 13.496 9.1894 12.8766 9.1894Z" fill="#47DFB1"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0">
+                                            <rect width="14" height="14" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                        
+                                        <a href="tel:+7495154355" class="main-phone__number">+7 (495) 154-35-51</a>
+                                    </div>
+                                    <a href="#" class="main-phone__link">Заказать звонок</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.main-head-info -->
+                        <button class="main-info__phone_mobile button-white">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M12.8766 9.1894C12.0195 9.1894 11.1779 9.05534 10.3804 8.79178C9.98958 8.65849 9.50917 8.78077 9.27066 9.02573L7.6965 10.2141C5.87092 9.23956 4.7464 8.11541 3.78521 6.30354L4.93857 4.77039C5.23822 4.47114 5.3457 4.03401 5.21693 3.62385C4.95224 2.82213 4.81779 1.98093 4.81779 1.12343C4.81782 0.503964 4.31386 0 3.69443 0H1.12339C0.503964 0 0 0.503964 0 1.12339C0 8.22365 5.77638 14 12.8766 14C13.4961 14 14 13.496 14 12.8766V10.3127C14 9.69336 13.496 9.1894 12.8766 9.1894Z" fill="#47DFB1"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="14" height="14" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>                                
+                        </button>
+                        <div class="main-head-menu_mobile">
+                            <a href="#" class="main-menu__link mobile-menu mobile-menu_popup"><span></span></a>
+                        </div>
+                        <!-- /.main-head-menu_mobile -->
+                    </div>
+                    <!-- /.main-head-wrap -->
+                </div>
+                <!-- /.main-head -->
+                <div class="modal-body">
+                    <ul class="modal-list">
+                        <li class="modal__item"><a href="#reason" class="modal__link">9 причин купить здесь квартиру</a></li>
+                        <li class="modal__item"><a href="#opportunity" class="modal__link">Все возможности в одном месте</a></li>
+                        <li class="modal__item"><a href="#infrastructure" class="modal__link">Инфраструктура</a></li>
+                        <li class="modal__item"><a href="#gallery" class="modal__link">Галерея</a></li>
+                        <li class="modal__item"><a href="#tradeIn" class="modal__link">Услуги TRADE-IN</a></li>
+                        <li class="modal__item"><a href="#about" class="modal__link">О застройщике</a></li>
+                        <li class="modal__item"><a href="#steps" class="modal__link">Ход строительства ЖК</a></li>
+                        <li class="modal__item"><a href="#plan" class="modal__link">Планировки квартир</a></li>
+                        <li class="modal__item"><a href="#easy" class="modal__link">Купить квартиру - просто!</a></li>
+                        <li class="modal__item"><a href="" class="modal__link">Планировки квартир</a></li>
+                        <li class="modal__item"><a href="#important" class="modal__link">Важно знать</a></li>
+                        <li class="modal__item"><a href="#contacts" class="modal__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-wrap">
+                    <div class="footer-logo">
+                        <img src="img/footer/vtb-footer.png" alt="vtb-footer">
+                        <span class="footer-logo__text">Финансовый партнер</span>
+                    </div>
+                    <div class="footer-copyright">
+                        <span class="footer-copyright_first">© 1994-2021, АО «Дон-Строй Инвест»</span>
+                        <span class="footer-copyright_second">Материалы, представленные на сайте, не являются публичной офертой</span>
+                    </div>
+                    <div class="footer-buttons">
+                        <button class="footer-button"><span class="footer-button_bg">Выбрать квартиру</span></button>
+                        <button class="footer-button"><span class="footer-button_bg">
+                            <img src="img/footer/footer-phone.svg" alt="footer-phone">
+                        </span></button>
+                        <button class="footer-button"><span class="footer-button_bg">
+                            <img src="img/footer/footer-wa.svg" alt="footer-wa">
+                        </span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <div class="callback">
+        <div class="callback-dialog">
+            <button class="callback__close">
+                <span class="callback__close__span">
+                    <span></span>
+                </span>
+            </button>
+            <!-- /.callback__close -->
+            <div class="callback-body">
+                <h2 class="callback__title">
+                    Получить консультацию
+                </h2>
+                <!-- /.callback__title -->
+                <span class="callback__subtitle">Оставьте Ваши контакты и наши менеджеры свяжутся с вами</span>
+                <!-- /.callback__subtitle -->
+                <form action="" class="callback__form">
+                    <input type="text" class="callback__input" placeholder="Ваше имя"><input type="text" class="callback__input"  placeholder="Ваш номер">
+                    <div class="callback__input-checkbox">
+                        <input type="checkbox" name="modal-checkbox" id="modal-checkbox" class="callback__input__checkbox"> 
+                        <label for="modal-checkbox" class="callback__checkbox__label">
+                            <span class="callback__checkbox__span"></span>
+                        </label>
+                        <a href="#" class="callback__link">Согласен с политикой персональных данных</a>
+                    </div>
+                    <button class="callback-button">
+                        <span class="callback-button_bg">
+                            Отправить
+                        </span>
+                    </button>
+                </form>
+                <!-- /.callback__form -->
+                <!-- /.callback-button --></div>
+            <!-- /.callback-body -->
+        </div>
+        <!-- /.callback-dialog -->
+    </div>
+    <!-- /.callback -->
     <script src="scripts/swiper.js"></script>
     <script src="scripts/simplebar.js"></script>
     <script src="scripts/scripts.js"></script>

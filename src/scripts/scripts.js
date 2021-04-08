@@ -1,3 +1,55 @@
+let menu = document.querySelector(".main-menu__link");
+let mobileMenu = document.querySelector(".mobile-menu");
+let popupMenu = document.querySelector(".menu_popup");
+let popupMobileMenu = document.querySelector(".mobile-menu_popup")
+let modal = document.querySelector(".modal");
+menu.addEventListener("click", function(e){
+  e.preventDefault()
+  menu.classList.toggle("main-menu__link_active");
+  mobileMenu.classList.toggle("main-menu__link_active")
+  popupMenu.classList.toggle("main-menu__link_active")
+  popupMobileMenu.classList.toggle("main-menu__link_active");
+  modal.classList.toggle("modal_active");
+});
+mobileMenu.addEventListener("click", function(e){
+  e.preventDefault()
+  mobileMenu.classList.toggle("main-menu__link_active");
+  menu.classList.toggle("main-menu__link_active");
+  popupMenu.classList.toggle("main-menu__link_active")
+  popupMobileMenu.classList.toggle("main-menu__link_active");
+  modal.classList.toggle("modal_active");
+
+});
+popupMenu.addEventListener("click", function(e){
+  e.preventDefault()
+  popupMenu.classList.toggle("main-menu__link_active")
+  menu.classList.toggle("main-menu__link_active");
+  mobileMenu.classList.toggle("main-menu__link_active");
+  popupMobileMenu.classList.toggle("main-menu__link_active");
+  modal.classList.toggle("modal_active");
+});
+popupMobileMenu.addEventListener("click", function(e){
+  e.preventDefault()
+  popupMobileMenu.classList.toggle("main-menu__link_active");
+  popupMenu.classList.toggle("main-menu__link_active")
+  menu.classList.toggle("main-menu__link_active");
+  mobileMenu.classList.toggle("main-menu__link_active");
+  modal.classList.toggle("modal_active");
+});
+
+// Переходы по ссылкам
+link = document.querySelectorAll(".modal__link");
+link.forEach(function(item){
+  item.addEventListener("click", function(){
+    popupMobileMenu.classList.toggle("main-menu__link_active");
+    popupMenu.classList.toggle("main-menu__link_active")
+    menu.classList.toggle("main-menu__link_active");
+    mobileMenu.classList.toggle("main-menu__link_active");
+    modal.classList.toggle("modal_active");
+  })
+})
+
+
 let swiper = new Swiper('.reason-slider',{
     slidesPerView: 3,
     loop: true,
