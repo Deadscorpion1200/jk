@@ -858,6 +858,14 @@ p {
   margin-bottom: 25px;
 }
 
+select {
+  outline: none;
+}
+
+input[type=text], input[type=submit], select, textarea {
+  -webkit-appearance: none;
+}
+
 .button-white {
   width: 51px;
   height: 51px;
@@ -1549,8 +1557,8 @@ iframe {
   padding: 10px 40px 10px 30px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  overflow-y: visible;
   position: relative;
+  width: 290px;
 }
 
 .infrastructure-menu {
@@ -1560,7 +1568,6 @@ iframe {
 
 .infrastructure-menu-block {
   height: 534px;
-  overflow-y: scroll;
 }
 
 .infrastructure-item {
@@ -1628,6 +1635,48 @@ iframe {
 .infrastructure-wrap {
   display: flex;
   justify-content: space-between;
+}
+
+.infrastructure-select-wrapper {
+  display: none;
+}
+
+.infrastructure-select__arrow {
+  position: absolute;
+  top: 20px;
+  z-index: 10;
+  right: 19px;
+}
+
+.simplebar-track {
+  width: 8px !important;
+  margin-top: 15px;
+  right: 15px;
+  background: red;
+  display: flex;
+  background: #fff;
+  height: 508px;
+}
+
+.simplebar-track::before {
+  position: absolute;
+  left: 50%;
+  margin-left: -2px;
+  content: '';
+  height: 100%;
+  width: 3px;
+  background: #eaeaea;
+}
+
+.simplebar-scrollbar {
+  width: 8px !important;
+  background: linear-gradient(-90deg, #CAFFEF, #50BD9C);
+  border-radius: 40px;
+  height: 73px;
+}
+
+.simplebar-scrollbar:before {
+  background: linear-gradient(#3CC99E, #47DFB1);
 }
 
 .gallery {
@@ -2510,22 +2559,26 @@ iframe {
   visibility: inherit;
   transition-delay: 0s;
   background: rgba(0, 0, 0, 0.5);
+  transition: .1s;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 15;
-  transition: .1s;
-  display: none;
-  opacity: 1;
+  z-index: -10;
+  transition: .2s;
   justify-content: flex-end;
+  display: flex;
+  opacity: 0;
 }
 
 .callback_active {
-  display: flex;
+  opacity: 1;
+  z-index: 20;
+  transition: .2s;
 }
 
 .callback-dialog {
+  transition: .2s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3087,6 +3140,23 @@ input[type=checkbox]:checked + .callback__checkbox__label::before {
   }
   .infrastructure-menu-block {
     display: none;
+  }
+  .infrastructure-select-wrapper {
+    display: block;
+    position: relative;
+  }
+  .infrastructure-select {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 11px;
+    appearance: none !important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: none;
+    color: #47DFB1;
+    font-family: "Montserrat Medium";
+    padding: 18px 19px 18px 40px;
   }
   .infrastructure-content {
     width: 100%;

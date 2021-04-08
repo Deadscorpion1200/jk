@@ -42,20 +42,25 @@
     visibility: inherit;
     transition-delay: 0s;
     background: rgba(0,0,0,.5)
+    transition: .1s
     width: 100%
     height: 100%
     top: 0
     left: 0
-    z-index: 15
-    transition: .1s
+    z-index: -10
+    transition: .2s
     // display: flex
-    display: none
-    opacity: 1
     justify-content: flex-end
+    display: flex
+    opacity: 0
     &_active
-        display: flex
+        opacity: 1
+        z-index: 20
+        transition: .2s
+
     &-dialog
         // padding-top: 150px
+        transition: .2s
         display: flex
         justify-content: center
         align-items: center

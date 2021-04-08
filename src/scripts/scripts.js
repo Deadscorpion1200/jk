@@ -49,6 +49,18 @@ link.forEach(function(item){
   })
 })
 
+// Модалка для заказа обратного звонка
+let getCall = document.querySelectorAll('.getcall');
+let callBack = document.querySelector('.callback');
+let callBackClose = document.querySelector(".callback__close__span");
+getCall.forEach(function(item){
+  item.addEventListener("click", function(){
+    callBack.classList.toggle("callback_active");
+  });
+});
+callBackClose.addEventListener("click", function(){
+  callBack.classList.toggle("callback_active");
+});
 
 let swiper = new Swiper('.reason-slider',{
     slidesPerView: 3,
@@ -186,3 +198,6 @@ planBtn.forEach(function(item){
     }
   });
 });
+// simplebar
+new SimpleBar(document.querySelector('.infrastructure-menu-block'));
+new SimpleBar(document.querySelector('.infrastructure-content'));
