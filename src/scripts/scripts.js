@@ -134,6 +134,14 @@ let createFrame = function(id)
 // табы справочника
 const tabsBtn = document.querySelectorAll('.infrastructure-item');
 const tabsItems = document.querySelectorAll(".infrastructure-item__content");
+const valueSelect = document.querySelector(".infrastructure-select");
+
+// ----------------------- TABS
+valueSelect.addEventListener('change', function () {
+  document.querySelectorAll('.infrastructure-item__content').forEach((n, i) => {
+    n.classList.toggle('infrastructure-item__content_active', i === this.selectedIndex);
+  });
+});
 
 tabsBtn.forEach(function(item){
   item.addEventListener('click', function(){
@@ -155,6 +163,7 @@ tabsBtn.forEach(function(item){
   });
 });
 document.querySelector(".infrastructure-item").click();
+
 
 // Табы планировки квартир
 const planBtn = document.querySelectorAll(".plan-tab ");
