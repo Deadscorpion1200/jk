@@ -151,6 +151,7 @@
         display: inline
         color: #292929
         text-decoration: none
+        width: 220px
     &__input-checkbox
         display: flex
         justify-content: flex-start
@@ -181,15 +182,15 @@ input[type=checkbox]
     display: none
 input[type=checkbox] + .callback__checkbox__label
     display: block
-    width: 20px
-    height: 20px
+    width: 20px !important;
+    height: 20px !important;
     border: 1px solid #50BD9C
-    border-radius: 5px
+    border-radius: 50%
     margin-right: 15px
 input[type=checkbox]:checked + .callback__checkbox__label
     display: block
     position: relative
-    background: #afef88
+    background: linear-gradient(#3CC99E,#47DFB1)
     width: 20px
     height: 20px
     border: 1px  solid green
