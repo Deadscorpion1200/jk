@@ -1,0 +1,243 @@
+.main
+    padding-top: 50px
+    background: url('../img/main/main-bg.png') center no-repeat
+    background-size: cover
+    &::after
+        content: ''
+        position: absolute
+        background: url('../img/main/main-building.png')
+        right: 0
+        width: 1041px
+        height: 825px
+        top: 55px
+        z-index: -1
+    &-head
+        margin-bottom: 60px
+        &-wrap
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &-map
+            display: flex
+        &-info
+            display: flex
+        &-menu
+            margin-right: 46px
+            &_mobile
+                display: none
+    &-block
+        display: flex
+    &-menu__link
+        &:first-child
+            display: block
+            position: relative
+            width: 26px
+            height: 26px
+            // margin-bottom: 35px
+            margin-top: 12px
+            & span
+                top: 50%
+                margin-top: -1.5px
+                position: absolute
+                width: 26px
+                height: 3px
+                background: $main-color
+                border-radius: 2px
+                &::before
+                    content: ''
+                    position: absolute
+                    background: $main-color
+                    width: 26px
+                    height: 3px
+                    margin-top: -10px
+                &::after
+                    content: ''
+                    position: absolute
+                    background: $main-color
+                    width: 26px
+                    height: 3px
+                    margin-top: 10px
+        // &:last-child
+        //     width: 19px
+        //     height: 19px
+        //     position: relative
+        //     & span
+        //         position: absolute
+        //         top: 50%
+        //         height: 1px
+        //         margin-top: -0.5px
+        //         width: 19px
+        //         background: $main-color
+        //         &::before
+        //             content: ''
+        //             position: absolute
+        //             height: 1px
+        //             width: 9px
+        //             background: $main-color
+        //             margin-top: -3px
+        //             margin-left: -1px
+        //             transform: rotate(-45deg)
+        //         &::after
+        //             content: ''
+        //             position: absolute
+        //             height: 1px
+        //             width: 9px
+        //             background: $main-color
+        //             margin-top: 3px
+        //             margin-left: -1px
+        //             transform: rotate(45deg)
+    &-logo
+        &__title
+            font-size: 38px
+            text-transform: uppercase
+        &__link
+            color: #282828
+            text-decoration: none
+    &-map__icon
+        margin-right: 10px
+    &-map__text
+        font-size: 16px
+    &-phone__link
+        display: block
+        text-align: right
+    &-info__favorites
+        margin-right: 30px
+    &-info__obj
+        margin-right: 42px
+    &-info-phone
+        margin-top: 15px
+    &-phone__number
+        color: #282828
+        text-decoration: none
+        font-family: "Montserrat medium"
+        margin-left: 13px
+        font-size: 18px
+    &-phone__link
+        font-size: 14px
+        color: $link-color
+    &-body
+        margin-left: 75px
+    &-body__links
+        display: flex
+        width: 411px
+        justify-content: space-between
+        margin-bottom: 45px
+    &-link
+        display: flex
+        align-items: center
+        font-size: 16px
+        svg
+            margin-right: 15px
+    &-title
+        font-size: 48px
+        font-family: "Montserrat Medium"
+        margin-bottom: 32px
+        &__span
+            font-size: 36px
+            margin-bottom: 5px
+            font-family: "Montserrat Light"
+            display: block
+    &-form
+        margin-bottom: 70px
+        display: flex
+        align-items: center
+        &__text
+            display: block
+            font-size: 18px
+            margin-bottom: 28px
+        &__input
+            width: 179px
+            height: 46px
+            border: none
+            background: #F1FAF7
+            border-radius: 40px
+            padding: 0 0 0 36px
+            font-family: "Montserrat Light"
+            font-size: 12px
+            &:nth-child(1)
+                margin-right: 8px
+                background-image: url("../img/main/main-person.svg")
+                background-repeat: no-repeat
+                background-size: 10px
+                padding-right: 20px
+                background-position-x: 20px
+                background-position-y: 50%
+            &:nth-child(2)
+                margin-right: 15px
+                background-image: url("../img/main/main-phone.svg")
+                background-repeat: no-repeat
+                background-size: 10px
+                padding-right: 20px
+                background-position-x: 20px
+                background-position-y: 50%
+        &__button
+            width: 222px
+            height: 46px
+            background: linear-gradient( #CAFFEF -2%, #50BD9C 108.18%)
+            box-shadow: 0px 4px 20px rgba(146, 181, 222, 0.4)
+            border-radius: 40px
+            font-family: "Montserrat SemiBold"
+            font-size: 14px
+            color: #fff
+            position: relative
+            border: none
+            &_bg
+                display: flex
+                justify-content: center
+                align-items: center
+                position: absolute
+                width: 218px
+                height: 42px
+                border-radius: 40px
+                background: linear-gradient(94.97deg, #47DFB1 -2%, #3CC99E 108.18%)
+                top: 2px
+                left: 2px
+    &-text
+        &-wrap
+            display: flex
+            justify-content: space-between
+        &__full
+            padding: 44px 46px 37px 48px
+            width: 612px
+            background: rgba(227, 239, 239, 0.4)
+            box-shadow: 0px 4px 20px rgba(228, 228, 228, 0.1)
+            backdrop-filter: blur(4px)
+            border-radius: 10px
+            font-size: 16px
+            line-height: 20px
+            color: #454545
+        &__params
+            width: 188px
+            height: 201px
+            background: rgba(227, 239, 239, 0.4)
+            box-shadow: 0px 4px 20px rgba(228, 228, 228, 0.1)
+            padding: 41px 10px 31px 10px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            backdrop-filter: blur(4px)
+        &__icon
+            display: flex
+            width: 51px
+            height: 51px
+            align-items: center
+            justify-content: center
+            background: #fff
+            border-radius: 50%
+        &__subject
+            text-align: center
+            font-size: 16px
+        &__count
+            font-size: 24px
+            line-height: 29px
+            color: #454545
+            font-family: "Montserrat SemiBold"
+.main-head-menu, .main-logo
+    display: inline-block
+.main-text-wrapper
+    width: 580px
+    display: flex
+    justify-content: space-between
+.main-info__phone_mobile
+    display: none

@@ -1,0 +1,62 @@
+.footer
+    padding-top: 33px
+    padding-bottom: 72px
+    &-wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-logo
+        & img
+            display: block
+            margin-bottom: 11px
+        &__text
+            font-size: 13px
+            line-height: 16px
+            color: #878787
+            margin-left: 35px
+    &-copyright_first, &-copyright_second
+        display: block
+        color: #878787
+        font-size: 13px
+        line-height: 16px
+    &-button
+        background: linear-gradient(#CAFFEF,#50BD9C)
+        border:  none
+        height: 46px
+        border-radius: 40px
+        margin-right: 7px
+        color: #fff
+        font-family: "Montserrat Medium"
+        position: relative
+        box-shadow: 0px 4px 20px rgba(146, 181, 222, 0.4)
+        &:first-child
+            width: 202px
+            .footer-button_bg
+                position: absolute
+                top: 2px
+                left: 2px
+                width: 198px
+                height: 42px
+                background: linear-gradient(94.97deg, #47DFB1, #3CC99E)
+                border-radius: 40px
+                display: flex
+                justify-content: center
+                align-items: center
+        &:nth-child(2), &:last-child
+            width: 46px
+            .footer-button_bg
+                position: absolute
+                left: 2px
+                top: 2px
+                width: 42px
+                height: 42px
+                background: linear-gradient(94.97deg, #47DFB1, #3CC99E)
+                border-radius: 40px
+                display: flex
+                justify-content: center
+                align-items: center
+        &:last-child
+            margin-right: 0
+        &s
+            display: flex
+            align-items: center

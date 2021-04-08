@@ -1,0 +1,78 @@
+.plan
+    padding-top: 40px
+    padding-bottom: 77px
+    &__title
+        font-size: 36px
+        margin-bottom: 36px
+        margin-left: 75px
+    &-tab
+        position: relative
+        background: linear-gradient(#ffffff, #dedede)
+        padding: 14px 30px
+        border-radius: 40px
+        height: 46px
+        text-align: center
+        font-size: 14px
+        &s
+            width: 1146px
+            margin-right: auto
+            margin-left: auto
+            display: flex
+            justify-content: space-between
+        &:nth-child(1)
+            width: 320px
+        &:nth-child(2), &:nth-child(3)
+            width: 256px
+        &:nth-child(4)
+            width: 281px
+        &_bg
+            position: absolute
+            top: 2px
+            left: 2px
+            display: block
+            background: linear-gradient(94.97deg, #F8FBFA -2%, #EDEDED 108.18%)
+            border-radius: 40px
+            display: flex
+            justify-content: center
+            align-items: center
+            color: #888888
+            cursor: pointer
+        &_active
+            background: linear-gradient(#CAFFEF, #50BD9C)
+            & .plan-tab_bg
+                background: linear-gradient(94.97deg, #47DFB1, #3CC99E)
+                color: #fff
+                font-family: "Montserrat SemiBold"
+    &-content
+        width: 858px
+        margin-left: auto
+        margin-right: auto
+        &__box
+            text-align: center
+    &__content
+        display: flex
+        justify-content: space-between
+        display: none
+        margin-top: 40px
+        &_active
+            display: flex
+    &-box
+        &__price
+            font-size: 24px
+            line-height: 29px
+            color: $main-color
+            margin-bottom: 7px
+        &__floor
+            font-size: 18px
+            color: #282828
+        &__img
+            margin-bottom: 20px
+.plan-tab:first-child > .plan-tab_bg
+    height: 42px
+    width: 316px
+.plan-tab:nth-child(2) > .plan-tab_bg, .plan-tab:nth-child(3) > .plan-tab_bg
+    height: 42px
+    width: 252px
+.plan-tab:nth-child(4) > .plan-tab_bg
+    height: 42px
+    width: 277px
