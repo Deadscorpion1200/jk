@@ -1,0 +1,30 @@
+{
+  "name": "jk",
+  "version": "1.0.0",
+  "description": "jk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deadscorpion1200/jk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deadscorpion1200/jk/issues"
+  },
+  "homepage": "https://github.com/Deadscorpion1200/jk#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "gulp-tinypng-extended": "^3.0.2",
+    "minify-js": "0.0.4"
+  }
+}
