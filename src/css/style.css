@@ -1362,6 +1362,11 @@ input[type=text], input[type=submit], select, textarea {
   backdrop-filter: blur(4px);
 }
 
+.reason-slide__img {
+  width: 100%;
+  height: 100%;
+}
+
 .reason__slide {
   position: relative;
   padding: 16px;
