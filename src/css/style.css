@@ -2831,6 +2831,10 @@ input[type=checkbox]:checked + .callback__checkbox__label::before {
   .reason-slide__img {
     width: 100%;
   }
+  .reason-arrows {
+    width: 1012px;
+    bottom: 60px;
+  }
   .infrastructure:before {
     top: -115px;
   }
