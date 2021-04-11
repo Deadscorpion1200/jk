@@ -789,6 +789,10 @@ button.swiper-pagination-bullet {
   right: 2px;
 }
 
+.simplebar-track::before {
+  content: '' !important;
+}
+
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
   right: auto;
   left: 0;
@@ -2772,6 +2776,21 @@ input[type=checkbox]:checked + .callback__checkbox__label::before {
 
 .mobile-block {
   display: none;
+}
+
+@media (max-width: 1260px) {
+  .steps-arrows {
+    width: 100%;
+  }
+  .reason-arrows {
+    width: 100%;
+  }
+  .reason-slider {
+    width: 1180px;
+  }
+  .steps-slider {
+    width: 1180px;
+  }
 }
 
 @media (max-width: 1200px) {

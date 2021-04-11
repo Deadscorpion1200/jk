@@ -173,7 +173,10 @@
   left: 2px;
   right: 2px;
 }
-
+.simplebar-track::before
+{
+  content: '' !important;
+}
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
   right: auto;
   left: 0;
