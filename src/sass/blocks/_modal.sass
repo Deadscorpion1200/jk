@@ -1,20 +1,21 @@
 .modal
     position: fixed
-    visibility: inherit;
-    transition-delay: 0s;
-    height: 100vh;
-    width: 100%;
+    height: 100vh
+    width: 100%
     background: #EDF1F6
-    top: 0;
-    left: 0;
+    top: 0
+    left: 0
     z-index: 15
-    transition: .1s
+    transition: .4s
+    visibility: hidden
     opacity: 0
     overflow-y: scroll
     z-index: -10
     &_active
         opacity: 1
         z-index: 20
+        visibility: inherit
+        transition: visibility .4s ease,opacity .4s ease
     &-dialog
         padding-top: 50px
         padding-bottom: 30px
@@ -29,47 +30,69 @@
         padding: 10px
         width: 33.333%
         height: 100px
-        &:hover
+        position: relative
+        overflow: hidden
+        &::after
+            content: ''
+            width: 95%
+            height: 95%
             background: rgba(0,0,0,.02)
-            transtition: .2s
+            position: absolute
+            left: 0
+            top: 0
+            transform: translateX(-100%)
+            transform-origin: left
+            transition: 0.4s
+            cursor: pointer
+            border-radius: 15px
+        &:hover::after
+            transform: translateX(0%)
+            transition: 0.4s
     &__link
-        display: block
+        display: flex
+        align-items: center
         height: 100%
         font-size: 24px
         text-decoration: none
         color: $main-color
+        padding-left: 20px
 .callback
     position: fixed
-    visibility: inherit;
-    transition-delay: 0s;
+    visibility: inherit
+    transition-delay: 1s
     background: rgba(0,0,0,.5)
     width: 100%
     height: 100%
     top: 0
     left: 0
     z-index: -10
-    transition: .2s
+    transition: .6s all ease
+    visibility: hidden
     // display: flex
     justify-content: flex-end
     display: flex
     opacity: 0
+    transform: translateX(100%)
+    transition: .6s all ease
     &_active
         opacity: 1
         z-index: 20
-        transition: .5s
+        transform: translateX(0%)
+        transition: visibility .6s ease,opacity,transform, .6s ease
+        visibility: inherit
     &-dialog
         // padding-top: 150px
-        transition: .5s
+        transition: .5s all ease
         display: flex
         justify-content: center
         align-items: center
         padding-left: 100px
         padding-right: 100px
         background: #EDF1F6
-        height: 100vh;
-        width: 500px;
-        border-top-left-radius: 50px
-        border-bottom-left-radius: 50px
+        height: 100vh
+        width: 500px
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
         position: relative
     &__close
         position: absolute
@@ -134,7 +157,7 @@
         border: none
         border-radius: 40px
         height: 46px
-        width: 100% 
+        width: 100%
         margin-bottom: 10px
         padding-left: 35px
         font-size: 18px
@@ -155,9 +178,9 @@
         display: flex
         justify-content: flex-start
         align-items: center
-        margin-bottom: 50px
+        margin-bottom: 25px
     &-button
-        width: 220px
+        width: 100%
         height: 46px
         border-radius: 40px
         border: none
@@ -170,19 +193,19 @@
             background: linear-gradient(94.97deg, #47DFB1 -2%, #3CC99E 108.18%)
             font-size: 14px
             font-family: "Montserrat Medium"
-            width: 216px
+            width: 100%
             height: 42px
             border-radius: 40px
             display: flex
             justify-content: center
             align-items: center
-            color: #fff 
+            color: #fff
 input[type=checkbox]
     display: none
 input[type=checkbox] + .callback__checkbox__label
     display: block
-    width: 20px !important;
-    height: 20px !important;
+    width: 20px !important
+    height: 20px !important
     border: 1px solid #50BD9C
     border-radius: 50%
     margin-right: 15px
@@ -192,7 +215,7 @@ input[type=checkbox]:checked + .callback__checkbox__label
     background: linear-gradient(#3CC99E,#47DFB1)
     width: 20px
     height: 20px
-    border: 1px  solid green
+    border: 1px solid green
     border: none
     &::before
         text-align: center
@@ -200,6 +223,6 @@ input[type=checkbox]:checked + .callback__checkbox__label
         content: '\2713'
         left: 0
         right: 0
-        top: 0
+        top: -1px
         bottom: 0
         color: #fff

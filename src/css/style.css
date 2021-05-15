@@ -944,6 +944,10 @@ input[type=text], input[type=submit], select, textarea {
   overflow: auto;
 }
 
+input.invalid {
+  border: 1px solid red;
+}
+
 .main {
   padding-top: 50px;
   background: #ECF0F5;
@@ -1023,7 +1027,7 @@ input[type=text], input[type=submit], select, textarea {
   height: 3px;
   background: #47DFB1;
   border-radius: 2px;
-  transition: .2s;
+  transition: .3s;
   opacity: 1;
 }
 
@@ -1033,7 +1037,7 @@ input[type=text], input[type=submit], select, textarea {
   background: #47DFB1;
   width: 26px;
   height: 3px;
-  transition: .2s;
+  transition: .3s;
   top: 0;
 }
 
@@ -1043,15 +1047,14 @@ input[type=text], input[type=submit], select, textarea {
   background: #47DFB1;
   width: 26px;
   height: 3px;
-  margin-top: 10px;
-  transition: .1s;
+  transition: .3s;
   bottom: 0;
 }
 
 .main-menu__link_active span:nth-child(2) {
   height: 0;
-  transition: .2s;
-  background: transparent;
+  transition: 0s;
+  display: none;
   width: 0;
 }
 
@@ -1059,14 +1062,14 @@ input[type=text], input[type=submit], select, textarea {
   transform: rotate(45deg);
   margin-top: 0;
   top: 50%;
-  transition: .1s;
+  transition: .3s;
 }
 
 .main-menu__link_active span:nth-child(3) {
   transform: rotate(-45deg);
   top: 50%;
   margin-top: 0;
-  transition: .1s;
+  transition: .3s;
 }
 
 .main-logo__title {
@@ -1090,14 +1093,35 @@ input[type=text], input[type=submit], select, textarea {
 .main-phone__link {
   display: block;
   text-align: right;
+  text-decoration: none;
+  position: relative;
+}
+
+.main-phone__link::after {
+  width: 65%;
+  height: 1.2px;
+  content: '';
+  background: #338D72;
+  position: absolute;
+  left: 71px;
+  bottom: -2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: 0.3s;
+}
+
+.main-phone__link:hover::after {
+  transform: scaleX(1);
 }
 
 .main-info__favorites {
   margin-right: 30px;
+  padding: 17px;
 }
 
 .main-info__obj {
   margin-right: 42px;
+  padding: 18px;
 }
 
 .main-info-phone {
@@ -1110,6 +1134,10 @@ input[type=text], input[type=submit], select, textarea {
   font-family: "Montserrat medium";
   margin-left: 13px;
   font-size: 18px;
+}
+
+.main-phone__number:hover {
+  color: #338D72;
 }
 
 .main-phone__link {
@@ -1176,6 +1204,7 @@ input[type=text], input[type=submit], select, textarea {
   padding: 0 0 0 36px;
   font-family: "Montserrat Light";
   font-size: 12px;
+  margin-right: 10px;
 }
 
 .main-form__input:nth-child(1) {
@@ -1186,6 +1215,7 @@ input[type=text], input[type=submit], select, textarea {
   padding-right: 20px;
   background-position-x: 20px;
   background-position-y: 50%;
+  margin: 0px;
 }
 
 .main-form__input:nth-child(2) {
@@ -1357,7 +1387,7 @@ input[type=text], input[type=submit], select, textarea {
   right: 0;
   color: #fff;
   display: flex;
-  height: 100%;
+  height: 98%;
   top: 0px;
   right: 0px;
   flex-direction: column;
@@ -2520,15 +2550,14 @@ iframe {
 
 .modal {
   position: fixed;
-  visibility: inherit;
-  transition-delay: 0s;
   height: 100vh;
   width: 100%;
   background: #EDF1F6;
   top: 0;
   left: 0;
   z-index: 15;
-  transition: .1s;
+  transition: .4s;
+  visibility: hidden;
   opacity: 0;
   overflow-y: scroll;
   z-index: -10;
@@ -2537,6 +2566,8 @@ iframe {
 .modal_active {
   opacity: 1;
   z-index: 20;
+  visibility: inherit;
+  transition: visibility .4s ease,opacity .4s ease;
 }
 
 .modal-dialog {
@@ -2557,45 +2588,69 @@ iframe {
   padding: 10px;
   width: 33.333%;
   height: 100px;
+  position: relative;
+  overflow: hidden;
 }
 
-.modal__item:hover {
+.modal__item::after {
+  content: '';
+  width: 95%;
+  height: 95%;
   background: rgba(0, 0, 0, 0.02);
-  transtition: .2s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transform-origin: left;
+  transition: 0.4s;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.modal__item:hover::after {
+  transform: translateX(0%);
+  transition: 0.4s;
 }
 
 .modal__link {
-  display: block;
+  display: flex;
+  align-items: center;
   height: 100%;
   font-size: 24px;
   text-decoration: none;
   color: #47DFB1;
+  padding-left: 20px;
 }
 
 .callback {
   position: fixed;
   visibility: inherit;
-  transition-delay: 0s;
+  transition-delay: 1s;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: -10;
-  transition: .2s;
+  transition: .6s all ease;
+  visibility: hidden;
   justify-content: flex-end;
   display: flex;
   opacity: 0;
+  transform: translateX(100%);
+  transition: .6s all ease;
 }
 
 .callback_active {
   opacity: 1;
   z-index: 20;
-  transition: .5s;
+  transform: translateX(0%);
+  transition: visibility .6s ease,opacity,transform, .6s ease;
+  visibility: inherit;
 }
 
 .callback-dialog {
-  transition: .5s;
+  transition: .5s all ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2604,8 +2659,8 @@ iframe {
   background: #EDF1F6;
   height: 100vh;
   width: 500px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   position: relative;
 }
 
@@ -2718,11 +2773,11 @@ iframe {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .callback-button {
-  width: 220px;
+  width: 100%;
   height: 46px;
   border-radius: 40px;
   border: none;
@@ -2737,7 +2792,7 @@ iframe {
   background: linear-gradient(94.97deg, #47DFB1 -2%, #3CC99E 108.18%);
   font-size: 14px;
   font-family: "Montserrat Medium";
-  width: 216px;
+  width: 100%;
   height: 42px;
   border-radius: 40px;
   display: flex;
@@ -2765,7 +2820,7 @@ input[type=checkbox]:checked + .callback__checkbox__label {
   background: linear-gradient(#3CC99E, #47DFB1);
   width: 20px;
   height: 20px;
-  border: 1px  solid green;
+  border: 1px solid green;
   border: none;
 }
 
@@ -2775,7 +2830,7 @@ input[type=checkbox]:checked + .callback__checkbox__label::before {
   content: '\2713';
   left: 0;
   right: 0;
-  top: 0;
+  top: -1px;
   bottom: 0;
   color: #fff;
 }
@@ -3466,4 +3521,3 @@ input[type=checkbox]:checked + .callback__checkbox__label::before {
     font-size: 14px;
   }
 }
-/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 .main
     padding-top: 50px
-    background: #ECF0F5    
+    background: #ECF0F5
     &::before
         content: ''
         position: absolute
@@ -40,14 +40,13 @@
             &_mobile
                 display: none
     &-block
-        
+
         display: flex
     &-menu__link
         display: block
         position: relative
         width: 26px
         height: 26px
-        // margin-bottom: 35px
         margin-top: 12px
         & span:nth-child(2)
             top: 50%
@@ -57,7 +56,7 @@
             height: 3px
             background: $main-color
             border-radius: 2px
-            transition: .2s
+            transition: .3s
             opacity: 1
         & span:nth-child(1)
             content: ''
@@ -66,7 +65,7 @@
             width: 26px
             height: 3px
             // margin-top: -10px
-            transition: .2s
+            transition: .3s
             top: 0
         & span:nth-child(3)
             content: ''
@@ -74,25 +73,24 @@
             background: $main-color
             width: 26px
             height: 3px
-            margin-top: 10px
-            transition: .1s
+            transition: .3s
             bottom: 0
         &_active
             & span:nth-child(2)
                 height: 0
-                transition: .2s
-                background: transparent
+                transition: 0s
+                display: none
                 width: 0
             & span:nth-child(1)
                 transform: rotate(45deg)
                 margin-top: 0
                 top: 50%
-                transition: .1s
+                transition: .3s
             & span:nth-child(3)
                 transform: rotate(-45deg)
                 top: 50%
                 margin-top: 0
-                transition: .1s
+                transition: .3s
 
         // &:last-child
         //     width: 19px
@@ -137,10 +135,27 @@
     &-phone__link
         display: block
         text-align: right
+        text-decoration: none
+        position: relative
+        &::after
+            width: 65%
+            height: 1.2px
+            content: ''
+            background: $link-color
+            position: absolute
+            left: 71px
+            bottom: -2px
+            transform: scaleX(0)
+            transform-origin: right
+            transition: 0.3s
+        &:hover::after
+            transform: scaleX(1)
     &-info__favorites
         margin-right: 30px
+        padding: 17px
     &-info__obj
         margin-right: 42px
+        padding: 18px
     &-info-phone
         margin-top: 15px
     &-phone__number
@@ -149,6 +164,8 @@
         font-family: "Montserrat medium"
         margin-left: 13px
         font-size: 18px
+        &:hover
+            color: $link-color
     &-phone__link
         font-size: 14px
         color: $link-color
@@ -195,6 +212,7 @@
             padding: 0 0 0 36px
             font-family: "Montserrat Light"
             font-size: 12px
+            margin-right: 10px
             &:nth-child(1)
                 margin-right: 8px
                 background-image: url("../img/main/main-person.svg")
@@ -203,6 +221,7 @@
                 padding-right: 20px
                 background-position-x: 20px
                 background-position-y: 50%
+                margin: 0px
             &:nth-child(2)
                 margin-right: 15px
                 background-image: url("../img/main/main-phone.svg")
