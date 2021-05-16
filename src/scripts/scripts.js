@@ -197,7 +197,13 @@ planBtn.forEach(function (item) {
 // simplebar
 new SimpleBar(document.querySelector('.infrastructure-menu-block'));
 new SimpleBar(document.querySelector('.infrastructure-content'));
-
+let successModal = document.querySelector('.success');
+let successClose = document.querySelector('.success-dialog__button').addEventListener('click', function () {
+  successModal.classList.remove('success_active');
+});
+let successButt = document.querySelector('.success-button').addEventListener('click', function () {
+  successModal.classList.remove('success_active');
+});
 //jquery
 jQuery(function ($) {
   $('.phone').mask('+7 (999) 999-99-99');
@@ -230,6 +236,7 @@ jQuery(function ($) {
         type: 'POST',
         data: $('.main-form').serialize(),
         success: function (data) {
+          $('.success').addClass('success_active')
           $('.main-form').trigger('reset');
         }
       });
